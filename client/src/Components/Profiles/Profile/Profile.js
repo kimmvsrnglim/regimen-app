@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
+//import { Row, Col } from 'react-bootstrap';
 import './Profile.css';
 import ProfileIcon from './ProfileIcon/ProfileIcon';
 
