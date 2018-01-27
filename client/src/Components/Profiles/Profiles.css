@@ -1,0 +1,33 @@
+.Profiles {
+    padding-top: 2em;
+    background-color: #f8f8f8;
+}
+
+.Profiles-title {
+    height: 30em;
+}
+
+p.Section-title {
+    color: black;
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    text-shadow: 2px 2px #d5d5d5;
+    background-color: #f8f8f8;
+}
+
+.Featured.row {
+    padding-top: 2em;
+    padding-left: 40vh;
+    padding-right: 40vh;
+    padding-bottom: 10em;
+    background-color: #f8f8f8;
+}
+
+.first, .second, .third {
+    height: auto;
+    background-color: #f8f8f8;
+    overflow: auto;
+    text-align: center;
+}

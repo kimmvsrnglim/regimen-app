@@ -1,0 +1,17 @@
+.Profile {
+    background-color: #f8f8f8;
+}
+
+.Content p {
+    padding-top: 1em;
+}
+
+ul.SmBio {
+    padding-left: 0px;
+    padding-top: 1em;
+    width: auto;
+}
+
+li {
+    list-style-type: none;
+}

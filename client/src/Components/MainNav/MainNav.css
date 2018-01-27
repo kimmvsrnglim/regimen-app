@@ -1,0 +1,27 @@
+.MainNav {
+    background-color: #f8f8f8;
+    overflow-y: hidden;
+}
+
+ul {
+    width: 100vh;
+    margin: 0 auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+li.NavOptions {
+    list-style-type: none;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
+

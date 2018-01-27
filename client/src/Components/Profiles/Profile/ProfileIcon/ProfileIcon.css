@@ -1,0 +1,8 @@
+img.img-circle {
+    height: 175px;
+    width: 175px;
+    margin: 2px;
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 50%;
+    outline-offset: -4px;
+}
