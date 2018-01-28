@@ -1,8 +1,8 @@
-import React, { Component } from 'react'; 
+import React from 'react'; 
 import './Header.css';
-import Layout from '../../Layout/Layout';
+//import Layout from '../../Layout/Layout';
 
-const Header = (props) => {
+const header = (props) => {
     return (
         <header className="App-header">
           <div><h1 className="App-title">Regimen</h1></div>
@@ -17,4 +17,4 @@ const Header = (props) => {
     );
 }
 
-export default Header;
+export default header;
