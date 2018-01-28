@@ -1,9 +1,10 @@
 import React from 'react';
+import './LoginForm.css';
 
 const loginform = (props) => {
     console.log()
     return (
-        <div className="loginForm">
+        <div className="container-fluid" id="loginForm">
                 <form onSubmit={(event) => props.handleLogin(event)}>
                     <div className="form-row">
                         <div className="col">
