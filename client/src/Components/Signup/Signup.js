@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import './Signup.css';
 
 class Signup extends Component {
 
@@ -35,7 +36,7 @@ class Signup extends Component {
 
     render(){
         return (
-            <div className="container-fluid signupcontent">
+            <div className="container-fluid" id="signupContent">
                 <form onSubmit={(event) => this.handleSignup(event)}>
                     <div className="form-row">
                         <div className="col">
