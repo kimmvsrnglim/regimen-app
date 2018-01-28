@@ -5,10 +5,12 @@ const models = require('./../models');
 
 //create user
 const createUser = (body) => {
+    console.log("BODY");
+    console.log(body);
     let username = body.username;
     let password = body.password;
-    let firstname = body.firstName;
-    let lastname = body.lastName;
+    let firstname = body.firstname;
+    let lastname = body.lastname;
     let age = body.age;
 
      
@@ -37,8 +39,8 @@ router.post('/', (req, res, next) => {
     console.log("POSTING");
     let username = req.body.username;
     let password = req.body.password;
-    let firstName = req.body.firstName;
-    let lastName = req.body.lastName;
+    let firstName = req.body.firstname;
+    let lastName = req.body.lastname;
     let age = req.body.age;
     console.log("stuff; "+username,password,firstName,lastName,age);
 
@@ -51,6 +53,7 @@ router.post('/', (req, res, next) => {
     let userInUse = null;
     checkUser(username).then(response => {
         userInUse = response
+        console.log(userInUse);
         
         if (userInUse == null) {
             createUser(req.body).then((response) => {
