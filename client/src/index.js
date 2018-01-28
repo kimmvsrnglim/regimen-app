@@ -4,7 +4,11 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+const app = (
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+)
 
-
-ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
+ReactDOM.render(app, document.getElementById('root'));
 registerServiceWorker();
