@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import GoogleLogin from 'react-google-login';
 import axios from 'axios';
 import LoginForm from './LoginForm/LoginForm';
+import Dashboard from '../Dashboard/Dashboard';
 
 
 class Login extends Component {
@@ -70,7 +71,7 @@ class Login extends Component {
     render() {
         let jsxHtml = "";
         if (this.state.token) {
-            jsxHtml = (<div> <p> User Logged In </p></div>)
+            jsxHtml = (<Dashboard/>)
         }
         else {
             jsxHtml = <LoginForm handleLogin={this.handleLogin}/>

@@ -7,6 +7,7 @@ import Footer from './Components/Footer/Footer';
 //import Layout from './Components/Layout/Layout';
 import { Route } from 'react-router-dom';
 import Signup from './Components/Signup/Signup';
+import Dashboard from './Components/Dashboard/Dashboard';
 //import axios from 'axios';
 
 
@@ -35,6 +36,10 @@ class App extends Component {
                 <Route 
                     path="/signup" 
                     component={Signup} 
+                />
+                <Route 
+                    path="/dashboard" 
+                    component={Dashboard} 
                 /> 
             
             <Footer />
