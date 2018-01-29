@@ -1,0 +1,27 @@
+#DashContent {
+    margin-left: 160px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.DashGreeting {
+    background-color:#8da7bbcb;
+    height: 300px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+h2.DashTitle {
+    font-size: 50px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px #4b4b4b;
+}
+
+.FavoriteTitle {
+    text-align: center;
+    font-size: 40px;
+    color: #414141;
+}

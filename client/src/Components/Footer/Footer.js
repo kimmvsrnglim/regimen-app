@@ -8,7 +8,7 @@ class Footer extends Component {
             <Row>
                 <Col xs={12} md={12} className="Footer-content">
                     <p className="Footer-title">
-                        Built by Kim Lim at Digital Crafts // 2018
+                        Built by Kim Lim + Cliff Cole at Digital Crafts // 2018
                     </p>
                 </Col> 
             </Row>
