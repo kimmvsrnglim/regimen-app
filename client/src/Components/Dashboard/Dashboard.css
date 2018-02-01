@@ -15,6 +15,7 @@
 
 h2.DashTitle {
     font-size: 50px;
+    padding-top:10px;
     text-align: center;
     color: #ffffff;
     text-shadow: 2px 2px #4b4b4b;
