@@ -1,8 +1,9 @@
 .App-header {
   background-color: #C08497;
   background-image: url('https://tinyurl.com/y7jrncmp');
+  max-width: 100%;
   background-position: center;
-  height: 370px;
+  height: auto;
   padding: 20px;
   overflow-y: hidden;
 }
@@ -18,25 +19,26 @@
   text-shadow: 2px 2px #454545;
 }
 
-.App-subtitle {
+#App-subtitle {
   height: 2.5em;
   margin-top: 1em;
   text-align: center; 
   vertical-align: middle;
 }
 
-h4.Subtitle-bar {
+h4#Subtitle-bar {
   font-size: 1em;
   text-align: center;
   display: inline-block;
   margin: 0 auto;
+  width: auto;
   padding-left: 1em;
   padding-right: 1em;
   background-color: #cc5500be;
   transform: skew(-40deg);
 }
 
-.App-subtitle span {
+#App-subtitle span {
   transform: skew(40deg);
   display: inline-block;
   position: relative;
@@ -46,8 +48,4 @@ h4.Subtitle-bar {
   color: rgb(252, 252, 252);
   background-color: #ffffff00;
   text-shadow: 2px 2px #454545;
-}
-
-.App-intro {
-  font-size: large;
 }

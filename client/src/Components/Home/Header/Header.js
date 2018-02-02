@@ -9,13 +9,17 @@ const header = (props) => {
       <Aux>
           <MainNav/>
           <header className="App-header">
-            <div><h1 className="App-title">Regimen</h1></div>
-            <div className="App-subtitle">
-              <h4 className="Subtitle-bar">
-              <span>
-                Showcase your own profile + follow your favorite holy grail regimens
-              </span>
-              </h4>
+              <div className="col-sm-12">
+                  <h1 className="App-title">Regimen</h1>
+              </div>
+            <div className="row">
+              <div className="col-sm-12" id="App-subtitle">
+                  <h4 className="col-sm-12" id="Subtitle-bar">
+                      <span>
+                        Showcase your own profile + follow your favorite holy grail regimens
+                      </span>
+                  </h4>
+              </div>
             </div>
           </header>
         </Aux>

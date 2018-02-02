@@ -1,20 +1,14 @@
-#DashContent {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-}
-
 .DashGreeting {
     background-color:#8da7bbcb;
     height: 100%;
+    width: 100%;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 
 h2.DashTitle {
     font-size: 50px;
-    padding-top:10px;
+    padding-top: 80px;
     text-align: center;
     color: #ffffff;
     text-shadow: 2px 2px #4b4b4b;
@@ -22,10 +16,22 @@ h2.DashTitle {
 
 .FavoriteTitle {
     text-align: center;
+    padding-bottom: 30px;
     font-size: 40px;
     color: #414141;
 }
 
-.row {
-    padding-top: 20px;
+@media (min-width: 1200px) {
+    .container{
+        max-width: 900px;
+    }
 }
+
+/* .row {
+    padding-top: 20px;
+} */
+
+/* .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+} */
