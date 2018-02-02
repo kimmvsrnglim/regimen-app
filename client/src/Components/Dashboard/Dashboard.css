@@ -1,5 +1,4 @@
 #DashContent {
-    margin-left: 160px;
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -8,7 +7,7 @@
 
 .DashGreeting {
     background-color:#8da7bbcb;
-    height: 300px;
+    height: 100%;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
@@ -25,4 +24,8 @@ h2.DashTitle {
     text-align: center;
     font-size: 40px;
     color: #414141;
+}
+
+.row {
+    padding-top: 20px;
 }

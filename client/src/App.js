@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import MainNav from './Components/MainNav/MainNav';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import Footer from './Components/Footer/Footer';
@@ -18,8 +17,7 @@ class App extends Component {
       console.log(this.props);
     return (
         <div className="App">
-            <MainNav />
-            
+
                 <Route 
                     exact 
                     path="/" 
