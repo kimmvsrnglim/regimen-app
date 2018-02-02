@@ -9,7 +9,7 @@ class SideDrawer extends Component {
 
   render () {
     return (
-        <Menu>
+        <Menu width={ '220px' }>
           <Link to="home" className="menu-item" href="/">Home</Link>
           <Link to="about" className="menu-item" href="/login">Login</Link>
           <Link to="contact" className="menu-item" href="/signin">Signin</Link>

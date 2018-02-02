@@ -1,10 +1,11 @@
 .MainNav {
     background-color: #f8f8f8;
     overflow-y: hidden;
+    width: 100%;
 }
 
 ul {
-    width: 100vh;
+    width: 100%;
     margin: 0 auto;
     padding-left: 0px;
     padding-right: 0px;
@@ -16,7 +17,6 @@ li.NavOptions {
     list-style-type: none;
     text-transform: uppercase;
     display: inline-block;
-    width: 100px;
     text-align: center;
 }
 

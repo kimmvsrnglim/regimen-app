@@ -9,18 +9,24 @@ class Dashboard extends Component {
     render() {
         return(
             <Aux>
-                <div className="container-fluid">
-                    <SideDrawer/>
-                    <div className="col-sm-12">
+                <SideDrawer/>
+                <div className="container-fluid" id="DashContent">
+                    <div className="row">
                         <div className="DashGreeting">
                             <h2 className="DashTitle">Welcome to Your Dashboard</h2>
-                            <FancyButton/>
+                            <FancyButton/> 
                         </div>
+                    </div>
+                </div>
+                <div className="container">
+                    <div className="row">
                         <div className="col-sm-12" align="center">
                             <h4 className="FavoriteTitle">
-                                <span>Current // Favorite Products</span>
+                            <span>Current // Favorite Products</span>
                             </h4>
                         </div>
+                    </div>
+                    <div className="row">
                         <div className="col-sm-12" id="DashCurrent">
                             <ProductEntry/>
                             <ProductEntry/>
