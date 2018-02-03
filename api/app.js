@@ -12,8 +12,9 @@ const index = require('./routes/index');
 const users = require('./routes/users');
 const signup = require('./routes/signup');
 const login = require('./routes/login');
+const product = require('./routes/product');
 
-var app = express();
+let app = express();
 
 app.use(express.json());
 app.use(morgan('dev'));
@@ -33,6 +34,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/signup', signup);
 app.use('/login', login);
+app.use('/product',product);
 
 
 module.exports = app;

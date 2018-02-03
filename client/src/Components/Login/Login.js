@@ -12,7 +12,11 @@ class Login extends Component {
         super(props);
         this.state = {
             userData: {
-
+                id: null,
+                username: null,
+                firstname: null,
+                lastname: null,
+                age: null
             },
             token: null,            
             value:''
@@ -63,11 +67,18 @@ class Login extends Component {
                     password: password
                 }
             }).then(results => {
-                console.log(results.data.token);
-                this.setState({token: results.data.token})
+                console.log(results.data);
+                this.setState(
+                    {
+                        userData: results.data.userData,
+                        token: results.data.token
+                    }
+                )
+                
                 this.props.history.push({
                     pathname: '/Dashboard',
-                    token: results.data.token
+                    token: results.data.token,
+                    userData: results.data.userData
                 })
             })
         }
