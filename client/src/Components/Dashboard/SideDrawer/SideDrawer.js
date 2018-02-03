@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { bubble as Menu } from 'react-burger-menu';
 import { Link } from 'react-router-dom';
-import Aux from '../../../hoc/Aux/Aux';
+//import Aux from '../../../hoc/Aux/Aux';
 import './SideDrawer.css';
 
 

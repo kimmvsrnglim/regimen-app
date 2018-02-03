@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import GoogleLogin from 'react-google-login';
+//import GoogleLogin from 'react-google-login';
 import axios from 'axios';
 import LoginForm from './LoginForm/LoginForm';
-import Dashboard from '../Dashboard/Dashboard';
-import Aux from '../../hoc/Aux/Aux';
+//import Dashboard from '../Dashboard/Dashboard';
+//import Aux from '../../hoc/Aux/Aux';
 import MainNav from '../MainNav/MainNav';
 
 

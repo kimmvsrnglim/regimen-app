@@ -5,7 +5,7 @@ const FancyButton = () => {
     return(
         <div className="FancyButton">
             <p>
-                <a href="#" class="btn">
+                <a href="" className="btn">
                     Add A New Product Entry
                 </a>
             </p>
