@@ -2,8 +2,8 @@ import React,{Component} from 'react';
 import { NavLink } from 'react-router-dom';
 import './MainNav.css';
 import BurgerMenu from 'react-burger-menu';
-import MenuWrap from './../MenuWrap/MenuWrap'
-import BurgerIcon from 'react-burger-menu';
+//import MenuWrap from './../MenuWrap/MenuWrap'
+//import BurgerIcon from 'react-burger-menu';
 
 class MainNav extends Component {
     state = {
