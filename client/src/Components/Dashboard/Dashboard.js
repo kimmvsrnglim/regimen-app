@@ -4,22 +4,44 @@ import './Dashboard.css';
 import FancyButton from './FancyButton/FancyButton';
 import Aux from '../../hoc/Aux/Aux';
 import ProductEntry from '../ProductEntry/ProductEntry';
+import axios from 'axios';
 
 class Dashboard extends Component {
     state = {
-        token: null
+        token: null,
+        modalOpen: false
     }
     
-    componentDidMount() {
+    componentWillMount() {
         //console.log(this.props);
         let token = this.props.location.token;
         this.setState({token: token});
+    }
+
+    onOpenModal = () => {
+        console.log("onOpenModal()")
+        this.setState({ modalOpen: true });
+    };
+    
+    onCloseModal = () => {
+        console.log("onCloseModal()")
+        this.setState({ modalOpen: false });
+    };
+
+    handleProductAdd = (event) => {
+        event.preventDefault()
+        console.log(event.target);
+        /* axios({
+            method: "POST",
+            url: "/product/add"
+        }) */
+
     }
     
     render() {
 
         let jsxHtml = "";
-        console.log(this.props);
+        
         if(this.props.location.token){ 
             jsxHtml = (
             <Aux>
@@ -28,7 +50,12 @@ class Dashboard extends Component {
                 <div className="row">
                     <div className="DashGreeting">
                         <h2 className="DashTitle">Welcome to Your Dashboard</h2>
-                        <FancyButton/> 
+                        <FancyButton
+                            handleProductAdd={this.handleProductAdd}
+                            modalOpen={this.state.modalOpen}
+                            onCloseModal={this.onCloseModal}
+                            onOpenModal={this.onOpenModal}
+                        /> 
                     </div>
                 </div>
             </div>
