@@ -80,7 +80,14 @@ route.post('/', (req,res,next) => {
                 let token = jwt.sign(payload,"y0y0",{expiresIn: 60 * 60});
                 res.json({
                     message: "ok", 
-                    token: token
+                    token: token,
+                    userData: {
+                        id: response.id, 
+                        firstname: response.firstname,
+                        lastname: response.lastname,
+                        username: response.username,
+                        age: response.age
+                    }
                 });
             }else {
                 res.status(204).json({

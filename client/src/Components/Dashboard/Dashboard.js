@@ -3,20 +3,51 @@ import SideDrawer from './SideDrawer/SideDrawer';
 import './Dashboard.css';
 import FancyButton from './FancyButton/FancyButton';
 import Aux from '../../hoc/Aux/Aux';
-import ProductEntry from '../ProductEntry/ProductEntry';
+//import ProductItem from '../ProductEntry/ProductItem';
 import axios from 'axios';
+import Products from './../Products/Products'
 
 class Dashboard extends Component {
     state = {
         token: null,
-        modalOpen: false
+        modalOpen: false,
+        userData: null
     }
     
     componentWillMount() {
         //console.log(this.props);
         let token = this.props.location.token;
-        this.setState({token: token});
+        this.setState(
+            {
+                userData: this.props.location.userData,
+                token: token
+            }
+        );
     }
+
+    componentDidMount() {
+        this.getProductsByUserId();
+    }
+
+    getProductsByUserId() {
+        let userData = this.state.userData;
+        if(typeof userData !== 'undefined'){
+            axios({
+                method: "GET",
+                url: "/product/" + this.state.userData.id
+            }).then(results => {
+                console.log(results.data);
+                let products = results.data
+                let newUserData = this.state.userData;
+                newUserData['products'] = products;
+                console.log("newUserData");
+                console.log(newUserData);
+                this.setState({userData: newUserData});
+            })
+        }
+    }
+    
+    
 
     onOpenModal = () => {
         console.log("onOpenModal()")
@@ -31,10 +62,27 @@ class Dashboard extends Component {
     handleProductAdd = (event) => {
         event.preventDefault()
         console.log(event.target);
-        /* axios({
+        let name = event.target.productname.value;
+        let price = event.target.price.value;
+        let purchaseurl = event.target.purchaseurl.value;
+        let promocode = event.target.promocode.value;
+        let description = event.target.description.value;
+        let userId = this.state.userData.id;
+        axios({
             method: "POST",
-            url: "/product/add"
-        }) */
+            url: "/product/add",
+            data: {
+                name: name,
+                price: price,
+                purchaseurl: purchaseurl,
+                promocode: promocode,
+                description: description,
+                UserId: userId
+            }
+        }).then(results => {
+            console.log(results.data);
+            this.onCloseModal()
+        }) 
 
     }
     
@@ -59,22 +107,7 @@ class Dashboard extends Component {
                     </div>
                 </div>
             </div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-sm-12" align="center">
-                        <h4 className="FavoriteTitle">
-                        <span>Current // Favorite Products</span>
-                        </h4>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-sm-12" id="DashCurrent">
-                        <ProductEntry/>
-                        <ProductEntry/>
-                        <ProductEntry/>
-                    </div>
-                </div>
-            </div>
+            <Products products={this.state.userData.products}/>
             </Aux>
             );
         }else {

@@ -16,7 +16,7 @@ const FancyButton = (props) => {
             <Modal
                 open={props.modalOpen}
                 onClose={props.onCloseModal}
-                little
+                
                 classNames={{
                   transitionEnter: 'transition-enter',
                   transitionEnterActive: 'transition-enter-active',
@@ -42,7 +42,7 @@ const FancyButton = (props) => {
                         <div className="form-row">
                             <div className="col">
                                 <label htmlFor="purchase">Purchase</label>
-                                <input type="text" className="form-control" name="purchase" placeholder="Purchase" />
+                                <input type="text" className="form-control" name="purchaseurl" placeholder="Purchase" />
                             </div>
                         </div>
                         <div className="form-row">
