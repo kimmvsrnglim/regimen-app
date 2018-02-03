@@ -65,19 +65,18 @@ class Login extends Component {
             }).then(results => {
                 console.log(results.data.token);
                 this.setState({token: results.data.token})
-                
+                this.props.history.push({
+                    pathname: '/Dashboard',
+                    token: results.data.token
+                })
             })
         }
 
 
     render() {
-        let jsxHtml = "";
-        if (this.state.token) {
-            jsxHtml = (<Dashboard/>)
-        }
-        else {
-            jsxHtml = <LoginForm handleLogin={this.handleLogin}/>
-        }
+        
+        let jsxHtml = <LoginForm handleLogin={this.handleLogin}/>
+        
 
         return (
             <div>
