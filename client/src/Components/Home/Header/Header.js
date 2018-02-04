@@ -1,13 +1,13 @@
 import React from 'react'; 
 import './Header.css';
-import MainNav2 from '../../MainNav/MainNav2';
+import MainNav from '../../MainNav/MainNav';
 import Aux from '../../../hoc/Aux/Aux';
 //import Layout from '../../Layout/Layout';
 
 const header = (props) => {
     return (
       <Aux>
-          <MainNav2/>
+          <MainNav/>
           <header className="App-header">
               <div className="col-sm-12">
                   <h1 className="App-title">Regimen</h1>
