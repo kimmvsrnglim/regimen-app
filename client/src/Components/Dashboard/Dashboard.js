@@ -82,8 +82,30 @@ class Dashboard extends Component {
         }).then(results => {
             console.log(results.data);
             this.onCloseModal()
+            this.getProductsByUserId(userId);
         }) 
 
+    }
+
+    handleProductEdit = (event) => {
+        event.preventDefault();
+        console.log(event.target)
+    }
+
+    handleProductDelete = (id) => {
+        
+        console.log("Product ID: "+id +" userId: "+ this.state.userData.id);
+        axios({
+            method: "DELETE",
+            url: "/product/delete",
+            data: {
+                productId: id,
+                userId: this.state.userData.id
+            }
+        }).then(results => {
+            console.log(results);
+            this.getProductsByUserId(this.state.userData.id);
+        })
     }
     
     render() {
@@ -93,21 +115,28 @@ class Dashboard extends Component {
         if(this.props.location.token){ 
             jsxHtml = (
             <Aux>
-                <SideDrawer/>
-                <div className="container-fluid" id="DashContent">
-                <div className="row">
-                    <div className="DashGreeting">
-                        <h2 className="DashTitle">Welcome to Your Dashboard</h2>
-                        <FancyButton
-                            handleProductAdd={this.handleProductAdd}
-                            modalOpen={this.state.modalOpen}
-                            onCloseModal={this.onCloseModal}
-                            onOpenModal={this.onOpenModal}
-                        /> 
+                    <SideDrawer/>
+                    <div className="container-fluid" id="DashContent">
+                    <div className="row">
+                        <div className="DashGreeting">
+                            <h2 className="DashTitle">Welcome to Your Dashboard</h2>
+                            <FancyButton
+                                handleProductAdd={this.handleProductAdd}
+                                modalOpen={this.state.modalOpen}
+                                onCloseModal={this.onCloseModal}
+                                onOpenModal={this.onOpenModal}
+                            /> 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <Products products={this.state.userData.products}/>
+                <Products 
+                    products={this.state.userData.products}
+                    handleProductDelete={this.handleProductDelete}
+                    handleProductEdit={this.handleProductEdit}
+                    modalOpen={this.state.modalOpen}
+                    onCloseModal={this.onCloseModal}
+                    onOpenModal={this.onOpenModal}
+                />
             </Aux>
             );
         }else {
