@@ -3,7 +3,7 @@
   background-image: url('https://tinyurl.com/y7jrncmp');
   max-width: 100%;
   background-position: center;
-  height: auto;
+  height: 600px;
   padding: 20px;
   overflow-y: hidden;
 }
@@ -13,6 +13,7 @@
   line-height: 2em;
   text-align: center;
   margin: 0 auto;
+  padding-top: 1.5em;
   text-transform: uppercase;
   letter-spacing: .2em;
   color: rgb(252, 252, 252);

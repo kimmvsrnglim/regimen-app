@@ -1,0 +1,35 @@
+.row#How {
+    height: auto;
+}
+
+.HowTitle {
+    padding-top: 2.2em;
+}
+
+p.HowHalf1 {
+    padding-top: 2.2em;
+    padding-left: 2.2em;
+    padding-right: 2.2em;
+    padding-bottom: 2.2em;
+    width: 100%;
+    height: auto;
+}
+
+p.HowHalf2 {
+    padding-top: 8.5em;
+    padding-left: 2.2em;
+    padding-right: 2.2em;
+    padding-bottom: 2.2em;
+    width: 100%;
+    height: auto;
+}
+
+.imgbg1 {
+    background-image: url('https://tinyurl.com/ydhbuf7q');
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-bottom: 62.5%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
