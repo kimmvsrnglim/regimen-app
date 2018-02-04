@@ -14,7 +14,7 @@ class MainNav extends Component {
                     <div className="navbar-collapse collapse dual-collapse">
                         <ul className="navbar-nav d-flex justify-content-start">
                             <li className="nav-item">
-                                <NavLink to="/home">Home</NavLink>
+                                <NavLink to="/home#">Home</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink to="/signup">Sign Up</NavLink>
@@ -27,13 +27,13 @@ class MainNav extends Component {
                     <div className="navbar-collapse collapse dual-collapse">
                         <ul className="navbar-nav d-flex justify-content-end">
                             <li className="nav-item">
-                                <Scrollchor to="#what">What</Scrollchor>
+                                <Scrollchor to="#What">What</Scrollchor>
                             </li>
                             <li className="nav-item">
-                                <Scrollchor to="#how">How</Scrollchor>
+                                <Scrollchor to="#How">How</Scrollchor>
                             </li>
                             <li className="nav-item">
-                                <Scrollchor to="#who">Who</Scrollchor>
+                                <Scrollchor to="#Who">Who</Scrollchor>
                             </li>
                         </ul>
                     </div>

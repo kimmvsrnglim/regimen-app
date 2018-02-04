@@ -2,6 +2,9 @@ import React from 'react';
 import Header from './Header/Header';
 import Profiles from '../Profiles/Profiles';
 import Aux from '../../hoc/Aux/Aux';
+import What from '../What/What';
+import How from '../How/How';
+import Who from '../Who/Who';
 
 const Home = () => {
     return (
@@ -9,11 +12,9 @@ const Home = () => {
             <div className="container-fluid">
                 <Header/>
             </div>
-            <div className="container">
-                <div className="col-sm-12">
-                    <Profiles/>
-                </div>
-            </div>
+            <What/>
+            <How/>
+            <Who/>
         </Aux>
     );
 }
