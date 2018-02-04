@@ -1,9 +1,14 @@
-.row#How {
+#How {
     height: auto;
 }
 
 .HowTitle {
     padding-top: 2.2em;
+}
+
+.bgcolor {
+    background-color: #F3DFE1;
+    height: 100%;
 }
 
 p.HowHalf1 {
@@ -26,10 +31,15 @@ p.HowHalf2 {
 
 .imgbg1 {
     background-image: url('https://tinyurl.com/ydhbuf7q');
-    margin-right: -15px;
-    margin-left: -15px;
-    padding-bottom: 62.5%;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-bottom: 40%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
