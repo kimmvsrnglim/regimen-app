@@ -6,18 +6,27 @@ const productItem = (props) => {
 
     return (
         <Aux>
-            <div className="container">
-                <div className="row">
-                    <div className="col-sm-3" id="ProductImg" align="center">
-                        <img src={thumbnail} alt="..." width="170px" className="rounded-circle" />
+            <div className="card">
+                <img className="card-img-top" src={thumbnail} />
+                <div className="card-body">
+                    <h5 className="card-Title">{props.name}</h5>
+                    <p className="card-text"><small>{props.description}</small></p>
+                    <p className="card-text"><small>Price: {props.price}</small></p>
+                    <p className="card-text"><small><a href={props.purchaseurl}>Buy</a></small></p>
+                    <p className="card-text"><small>Promo: {props.promocode}</small></p>
+                </div>
+                <div className="card-footer">
+                    <div className="row">
+                    <div className="col">
+                        <button className="btn btn-sm btn-outline-info" onClick={props.onOpenModal}>Edit</button>
                     </div>
-                    <div className="col-sm-9" id="ProductContent">
-                        <h4 className="ProductName">{props.name}</h4>
-                        <p className="ProductSubtitle">{props.price} // {props.purchaseurl} // {props.promocode}</p>
-                        <p className="ProductDescription">{props.description}</p>
+                    <div className="col">
+                        <button className="btn btn-sm btn-outline-danger" onClick={() => props.handleProductDelete(props.productId)}>Delete</button>
+                    </div>
                     </div>
                 </div>
             </div>
+                      
         </Aux>
     )
 }
