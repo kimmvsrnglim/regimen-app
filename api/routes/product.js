@@ -19,7 +19,20 @@ route.get('/', (req,res,next) => {
         res.json(results);
     })
 })
-
+route.delete('/delete', (req,res,next) => {
+    let userId = req.body.userId;
+    let productId = req.body.productId;
+    models.Products.destroy({
+        where: {
+            UserId: userId,
+            id: productId
+        }
+    }).then(results => {
+        console.log(results);
+        res.json(results);
+    })
+    
+})
 route.get('/:id', (req,res,next) => {
     models.Products.findAll({
         where: {UserId: req.params.id}
