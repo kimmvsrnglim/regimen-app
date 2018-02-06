@@ -3,7 +3,7 @@
     width: 95%;
     padding-top: 5%;
 }
-
+ 
 .form-row, .submit {
     padding-top: 1%;
 }
@@ -12,15 +12,26 @@
     margin-top: 20px;
 }
 
-
 input[type="text"], textarea {
     outline: none;
     box-shadow:none !important;
     border:1px solid #ccc !important;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 input[type="password"], textarea {
     outline: none;
     box-shadow:none !important;
     border:1px solid #ccc !important;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }

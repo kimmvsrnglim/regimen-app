@@ -13,8 +13,20 @@
     padding: 20px;
 }
 
-.Greeting {
+h1.Greet {
     font-family: 'Zilla Slab';
+    font-weight: 300;
+    font-size: 5em;
+    line-height: .8em;
+    letter-spacing: 8px;
+}
+
+.Greeting2 {
+    font-family: 'Zilla Slab';
+    font-weight: 300;
+    font-size: 3em;
+    letter-spacing: 5px;
+
 }
 
 .LoginInput {
