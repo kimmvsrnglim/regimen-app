@@ -8,6 +8,11 @@
     height: 500px;
     /* height: auto; */
 }
+.About1, .About2 {
+    font-family: 'Zilla Slab';
+    font-style: italic;
+    font-size: 3em;
+}
 
 .highlight1 {
     background-color: rgb(198, 92, 111);

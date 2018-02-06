@@ -101,9 +101,11 @@ class Login extends Component {
                                 </div>
                             </div>
                             <div className="col-sm-8">
-                                <div className="Greeting">
-                                    <h1>Welcome!</h1>
-                                    <h2>Member Login</h2>
+                                <div className="Greeting1">
+                                    <h1 className="Greet">Welcome</h1>
+                                </div>
+                                <div className="Greeting2">
+                                    <h2><i>Member Login</i></h2>
                                 </div>
                                 <div className="LoginInput">
                                     {jsxHtml}

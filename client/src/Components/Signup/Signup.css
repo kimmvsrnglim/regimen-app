@@ -4,6 +4,43 @@
     padding-top: 5%;
 }
 
+h1.Greet {
+    font-family: 'Zilla Slab';
+    font-weight: 300;
+    font-size: 5em;
+    line-height: .8em;
+    letter-spacing: 8px;
+}
+
+.SignupForm {
+    font-family: 'Prata';
+    text-transform: uppercase;
+}
+
 .form-row, .submit {
     padding-top: 1%;
+}
+
+input[type="text"], textarea {
+    outline: none;
+    box-shadow:none !important;
+    border:1px solid #ccc !important;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+input[type="password"], textarea {
+    outline: none;
+    box-shadow:none !important;
+    border:1px solid #ccc !important;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
