@@ -2,8 +2,23 @@
     padding-top: 2em;
     padding-bottom: 1em;
 }
+
 #AboutUs {
     padding: 2em;
     height: 500px;
     /* height: auto; */
 }
+
+.highlight1 {
+    background-color: rgb(198, 92, 111);
+    padding-left: 5px;
+    color: rgb(235, 235, 235);
+    padding-right: 5px; /* adds a little breathing space between highlighted edge and the word */
+}
+
+.highlight2 {
+    background-color: rgb(56, 93, 173);
+    padding-left: 5px;
+    color: rgb(235, 235, 235);
+    padding-right: 5px; /* adds a little breathing space between highlighted edge and the word */
+  }

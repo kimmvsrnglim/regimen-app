@@ -10,5 +10,24 @@
 
 .WhatTitle {
     padding-top: 40px;
-    font-size: 5em;
+    font-size: 4.5em;
+    font-family: 'Zilla Slab';
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Prata';
+    line-height: 2.2em;
+    
+}
+
+.highlight {
+    background-color: #699A3B;
+    color: #e8e8e8;
+    text-shadow: 2px 2px #454545;
+    padding-left: 5px;
+    padding-right: 5px; 
+    font-family: 'Zilla Slab';
+    font-weight: 300;
 }
