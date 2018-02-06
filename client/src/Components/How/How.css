@@ -8,6 +8,9 @@
     padding-bottom: 2em;
     color: #213359;
     text-shadow: 2px 2px #e6e6e6;
+    font-family: 'Zilla Slab';
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
 .bgcolor {
@@ -47,7 +50,7 @@ p.HowHalf1 {
 }
 
 .colorbg1 {
-    background-color: rgba(104, 104, 104, 0.194);
+    background-color: rgba(52, 52, 52, 0.393);
     height: 500px;
     width: 500px;
     margin: 0 auto;

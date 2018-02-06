@@ -18,7 +18,7 @@ class Who extends Component {
                                 Kim Lim
                             </h4>
                             <p align="right">
-                                Nine hundred years of time and space, and I've never been slapped by someone's mother. Jelly baby? Oh my word! Geronimo! Run. Oh, for God's sake! Gallfrey stands! I've reversed the polarity of the Neutron flow, so the TARDIS should be free from the force field now. Sorry, must dash! We're trying to defeat the Daleks, not start a jumble sale! It's a fez. I wear a fez now. Fezzes are cool. You can spend the rest of your life with me, but I can't spend the rest of mine with you. I have to live on. Alone. That's the curse of the Time Lords.
+                                Nine hundred years of time and space, and I've never been slapped by someone's mother. Jelly baby? Oh my word!<span className="highlight1"> Geronimo! Run. </span> Oh, for God's sake! Gallfrey stands! I've reversed the polarity of the Neutron flow, so the TARDIS should be free from the force field now. <span className="highlight1"> Sorry, must dash! We're trying to defeat the Daleks, not start a jumble sale! It's a fez. </span> I wear a fez now. Fezzes are cool. You can spend the rest of your life with me, but I can't spend the rest of mine with you. I have to live on. Alone. That's the curse of the Time Lords.
                             </p>
                         </div>
                         <div className="col-sm-6">
@@ -26,9 +26,9 @@ class Who extends Component {
                                 Cliff Cole
                             </h4>
                             <p align="left">
-                                Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+                                Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette <span className="highlight2"> tatsoi pea sprouts</span> fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
                                 <br/><br/>
-                                Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.
+                                Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed <span className="highlight2"> collard greens nori.</span> Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.
                             </p>
                         </div>
                     </div>

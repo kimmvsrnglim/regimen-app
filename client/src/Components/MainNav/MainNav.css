@@ -19,8 +19,11 @@ li.NavOptions {
     text-align: center;
 }
 
-a {
+a, a:hover {
     text-decoration: none;
     text-align: center;
+    color: black;
+    font-family: 'Prata';
 }
+
 
