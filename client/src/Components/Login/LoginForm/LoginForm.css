@@ -1,9 +1,26 @@
-#loginForm {
+.loginForm {
     height: 520px;
-    width: 70%;
+    width: 95%;
     padding-top: 5%;
 }
 
 .form-row, .submit {
     padding-top: 1%;
+}
+
+.form-row {
+    margin-top: 20px;
+}
+
+
+input[type="text"], textarea {
+    outline: none;
+    box-shadow:none !important;
+    border:1px solid #ccc !important;
+}
+
+input[type="password"], textarea {
+    outline: none;
+    box-shadow:none !important;
+    border:1px solid #ccc !important;
 }
