@@ -14,11 +14,11 @@ const header = (props) => {
               </div>
             <div className="row">
               <div className="col-sm-12" id="App-subtitle">
-                  <h4 className="col-sm-12" id="Subtitle-bar">
+                  <h3 className="Subtitle-bar">
                       <span>
-                        Showcase your own profile + follow your favorite holy grail regimens
+                        Showcase your holy grail collection + discover your favorite products
                       </span>
-                  </h4>
+                  </h3>
               </div>
               <div className="col-sm-12">
                     <div className="Spacing"/>

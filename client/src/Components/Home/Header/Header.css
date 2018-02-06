@@ -27,14 +27,14 @@
   vertical-align: middle;
 }
 
-h4#Subtitle-bar {
+h3.Subtitle-bar {
   text-align: center;
   display: inline-block;
   margin: 0 auto;
   width: auto;
   padding-left: 1em;
   padding-right: 1em;
-  background-color: #485466;
+  background-color: #485466a8;
   transform: skew(-40deg);
 }
 
