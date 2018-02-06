@@ -20,6 +20,9 @@ const header = (props) => {
                       </span>
                   </h4>
               </div>
+              <div className="col-sm-12">
+                    <div className="Spacing"/>
+              </div>
             </div>
           </header>
         </Aux>
