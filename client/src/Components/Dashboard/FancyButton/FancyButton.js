@@ -8,7 +8,7 @@ const FancyButton = (props) => {
     return(
         <div className="FancyButton">
             <p>
-                <button onClick={props.onOpenModal} className="btn">
+                <button onClick={props.onOpenModal} className="btn btn-one">
                     Add A New Product Entry
                 </button>
             </p>
@@ -36,7 +36,7 @@ const FancyButton = (props) => {
                         <div className="form-row">
                             <div className="col">
                                 <label htmlFor="price">Price</label>
-                                <input type="price" className="form-control" name="price" placeholder="Price" />
+                                <input type="price" className="form-control" name="price" placeholder="P R I C E" />
                             </div>
                         </div>
                         <div className="form-row">

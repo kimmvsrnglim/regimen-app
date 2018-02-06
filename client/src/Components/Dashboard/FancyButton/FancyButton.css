@@ -23,26 +23,26 @@ a.btn {
 	border-bottom-width: 3px;
 }
 
-	a.btn:hover {
-		background-color: #e3e3e3;
-		border-color: rgba(0,0,0,0.5);
+a.btn:hover {
+	background-color: #e3e3e3;
+	border-color: rgba(0,0,0,0.5);
+}
+
+a.btn:active {
+	background-color: #CCC;
+	border-color: rgba(0,0,0,0.9);
+}
+.transition-enter {
+	transform: scale(0);
+  }
+  .transition-enter-active {
+	transform: scale(1);
+	transition: transform 1000ms ease;
+  }
+  .transition-exit {
+	transform: scale(1);
+  }
+  .transition-exit-active {
+	transform: scale(0);
+	transition: transform 1000ms ease;
 	}
-	
-	a.btn:active {
-		background-color: #CCC;
-		border-color: rgba(0,0,0,0.9);
-	}
-	.transition-enter {
-		transform: scale(0);
-	  }
-	  .transition-enter-active {
-		transform: scale(1);
-		transition: transform 1000ms ease;
-	  }
-	  .transition-exit {
-		transform: scale(1);
-	  }
-	  .transition-exit-active {
-		transform: scale(0);
-		transition: transform 1000ms ease;
-	  }
