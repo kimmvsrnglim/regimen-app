@@ -4,7 +4,7 @@ import './LoginForm.css';
 const loginform = (props) => {
     console.log()
     return (
-        <div className="container-fluid" id="loginForm">
+        <div className="loginForm">
                 <form onSubmit={(event) => props.handleLogin(event)}>
                     <div className="form-row">
                         <div className="col">
@@ -20,11 +20,11 @@ const loginform = (props) => {
                     </div>
                     <div className="form-row">
                         <div className="col">
-                            <input className="btn btn-secondary" type="submit" value="Log In" />
+                            <input className="btn btn-outline-secondary btn-lg btn-block" type="submit" value="Log In" />
                         </div> 
                     </div>
                 </form>
-            </div>
+        </div>
     )
 }
 
