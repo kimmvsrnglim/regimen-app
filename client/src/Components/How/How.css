@@ -3,12 +3,17 @@
 }
 
 .HowTitle {
-    padding-top: 2.2em;
+    font-size: 6em;
+    text-transform: uppercase;
+    padding-bottom: 2em;
+    color: #213359;
+    text-shadow: 2px 2px #e6e6e6;
 }
 
 .bgcolor {
-    background-color: #F3DFE1;
+    max-height: 100%;
     height: 100%;
+    background-color: #213359;
 }
 
 p.HowHalf1 {
@@ -17,11 +22,12 @@ p.HowHalf1 {
     padding-right: 2.2em;
     padding-bottom: 2.2em;
     width: 100%;
+    color: rgb(232, 232, 232);
     height: auto;
 }
 
-p.HowHalf2 {
-    padding-top: 8.5em;
+.HowHalf2 {
+    padding-top: 4.5em;
     padding-left: 2.2em;
     padding-right: 2.2em;
     padding-bottom: 2.2em;
@@ -30,14 +36,23 @@ p.HowHalf2 {
 }
 
 .imgbg1 {
-    background-image: url('https://tinyurl.com/ydhbuf7q');
+    background-image: url('https://tinyurl.com/ychmtxep');
     margin-right: 0px;
     margin-left: 0px;
-    padding-bottom: 40%;
-    background-position: 50% 50%;
+    padding-bottom: 10px;
+    height: auto;
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
+
+.colorbg1 {
+    background-color: rgba(104, 104, 104, 0.194);
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
 
 .no-gutter > [class*='col-'] {
     padding-right:0;
