@@ -7,7 +7,8 @@ const productItem = (props) => {
 
     return (
         <Aux>
-            <div className="card w-25 p-3">
+            
+            <div className="card">
                 <img className="card-img-top" src={thumbnail} />
                 <div className="card-body">
                     <h5 className="card-Title">{props.name}</h5>
