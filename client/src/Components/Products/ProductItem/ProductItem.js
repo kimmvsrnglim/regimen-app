@@ -1,12 +1,13 @@
 import React from 'react';
 import Aux from '../../../hoc/Aux/Aux';
 import thumbnail from './../../Profiles/Profile/ProfileIcon/thumbnail.png';
+import './ProductItem.css';
 
 const productItem = (props) => {
 
     return (
         <Aux>
-            <div className="card">
+            <div className="card w-25 p-3">
                 <img className="card-img-top" src={thumbnail} />
                 <div className="card-body">
                     <h5 className="card-Title">{props.name}</h5>

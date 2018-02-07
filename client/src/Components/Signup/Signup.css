@@ -1,7 +1,6 @@
 #signupContent {
-    height: 600px;
     width: 70%;
-    padding-top: 5%;
+    padding-bottom: 20px;
 }
 
 h1.Greet {
@@ -43,4 +42,15 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+#SignUpLogo {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.LogoDiv {
+    text-align: center;
+    padding-top: 100px;
 }

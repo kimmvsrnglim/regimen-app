@@ -41,6 +41,9 @@ class Signup extends Component {
         return (
             <Aux>
                 <MainNav/>
+                <div className="LogoDiv">
+                    <img src="./Logo.png" id="SignUpLogo" align="center" />
+                </div>
                 <div className="container" id="signupContent">
                     <div className="SignupTitle">
                         <h1 className="Greet" align="center">Get Started</h1>
