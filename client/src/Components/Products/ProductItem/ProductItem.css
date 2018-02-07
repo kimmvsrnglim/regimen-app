@@ -1,7 +1,6 @@
-img.card-img-top {
-    width: 17rem;
+.card-deck {
+    width: 80rem;
 }
-
-#ProductImg {
-    padding-top: 10px;
+.card {
+    width: 400px;
 }

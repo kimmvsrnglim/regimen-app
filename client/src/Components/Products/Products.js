@@ -11,11 +11,42 @@ const products = (props) => {
     if(typeof props.products !== 'undefined' ){
         
 
-        let rowLength = 4;
+        let row = [];
+        let columns = 4;
+        let rowCount = props.products.length % 4;
         let cardJsx = [];
-        let cardDeck = "<div className=\"card-deck\">"
-        
-        productJsx = props.products.map((product, idx) => {
+        for(let x = 0; x < props.products.length; x++){
+            if(x % columns === 0){
+                console.log("PUSHING: ");
+                console.log(cardJsx);
+                row.push(<div key={x} className="row">
+                <div className="col" align="center">
+                    <div className="card-deck"> { cardJsx}</div></div></div>)
+                cardJsx = [];
+            }
+            cardJsx.push(<ProductItem 
+                key={props.products[x].id} 
+                productId={props.products[x].id}
+                name={props.products[x].name}
+                price={props.products[x].price}
+                purchaseurl={props.products[x].purchaseurl}
+                promocode={props.products[x].promocode}
+                description={props.products[x].description}
+                handleProductEdit={props.handleProductEdit}
+                handleProductDelete={props.handleProductDelete}
+                onCloseModal={props.onCloseModal}
+                onOpenModal={props.onOpenModal}
+            />)
+
+            if(x +1 === props.products.length){
+                row.push(<div key={x} className="row">
+                <div className="col" align="center">
+                    <div className="card-deck"> { cardJsx}</div></div></div>)
+            }
+        }
+
+        productJsx = row;
+        /* productJsx = props.products.map((product, idx) => {
             console.log(product, idx);
             
             
@@ -35,16 +66,13 @@ const products = (props) => {
 
             
             return cardJsx;
-        })
+        }) */
         jsxHtml = (
-            <div className="container">
-                <div className="row">
-                    <div className="col-sm-12" align="center">
-                        <div className="card-deck">
+            <div className="container-fluid">
+                
                             {productJsx}
-                        </div>
-                    </div>
-                </div>
+                    
+                    
             </div>
                     
                         
