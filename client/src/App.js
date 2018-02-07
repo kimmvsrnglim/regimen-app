@@ -7,6 +7,7 @@ import Footer from './Components/Footer/Footer';
 import { Route } from 'react-router-dom';
 import Signup from './Components/Signup/Signup';
 import Dashboard from './Components/Dashboard/Dashboard';
+import ProfilesV2 from './Components/Dashboard/ProfilesV2/ProfilesV2';
 //import axios from 'axios';
 
 
@@ -39,6 +40,10 @@ class App extends Component {
                     path="/dashboard" 
                     component={Dashboard} 
                 /> 
+                <Route 
+                    path="/ProfilesV2"
+                    component={ProfilesV2}
+                />
             </div> 
             <Footer />
         </div>

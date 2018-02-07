@@ -119,7 +119,7 @@ class Dashboard extends Component {
                     <div className="container-fluid" id="DashContent">
                     <div className="row">
                         <div className="DashGreeting">
-                            <h2 className="DashTitle">Welcome to Your Dashboard</h2>
+                            <h2 className="DashTitle">Hello, [USER]</h2>
                             <FancyButton
                                 handleProductAdd={this.handleProductAdd}
                                 modalOpen={this.state.modalOpen}
