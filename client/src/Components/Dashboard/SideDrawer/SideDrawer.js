@@ -8,11 +8,22 @@ import './SideDrawer.css';
 class SideDrawer extends Component {
 
   render () {
+    console.log("SIDEBAR: ");
+    console.log(this.props);
     return (
         <Menu width={ '220px' }>
           <Link to="Home" className="menu-item" href="/">Home</Link>
           <Link to="Dashboard" className="menu-item" href="/dashboard">My Dash</Link>
-          <Link to="ProfilesV2" className="menu-item" href="/ProfilesV2">Profiles</Link>
+          <Link to={{
+              pathname: '/profiles',
+              state:  this.props.state
+              
+            }}>Profiles
+          </Link>
+          {/* <Link 
+            to="ProfilesV2" 
+            className="menu-item" 
+            href="/ProfilesV2">Profiles</Link> */}
           <Link to="Logout" className="menu-item" href="/logout">Logout</Link>
         </Menu>
     );

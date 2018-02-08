@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductItem from './ProductItem/ProductItem'
 import Aux from './../../hoc/Aux/Aux'
+import './Products.css';
 
 const products = (props) => {
     console.log(props);
@@ -15,13 +16,13 @@ const products = (props) => {
         let columns = 4;
         let rowCount = props.products.length % 4;
         let cardJsx = [];
-        for(let x = 0; x < props.products.length; x++){
-            if(x % columns === 0){
+        /* for(let x = 0; x < props.products.length; x++){
+            if(x % columns === 0 && x !== 0){
                 console.log("PUSHING: ");
                 console.log(cardJsx);
-                row.push(<div key={x} className="row">
-                <div className="col" align="center">
-                    <div className="card-deck"> { cardJsx}</div></div></div>)
+                row.push(
+                <div key={x} className="col-md-3 col-xs-6" align="center">
+                    { cardJsx}</div>)
                 cardJsx = [];
             }
             cardJsx.push(<ProductItem 
@@ -39,10 +40,40 @@ const products = (props) => {
             />)
 
             if(x +1 === props.products.length){
-                row.push(<div key={x} className="row">
-                <div className="col" align="center">
-                    <div className="card-deck"> { cardJsx}</div></div></div>)
+                row.push(
+                <div className="col-md-3 col-xs-6" align="center">
+                    { cardJsx}</div>)
             }
+        } */
+        for(let x = 0; x < props.products.length; x++){
+            
+                console.log("PUSHING: ");
+                console.log(cardJsx);
+            
+            cardJsx.push(<ProductItem 
+                key={props.products[x].id} 
+                productId={props.products[x].id}
+                name={props.products[x].name}
+                price={props.products[x].price}
+                purchaseurl={props.products[x].purchaseurl}
+                promocode={props.products[x].promocode}
+                url={props.products[x].url}
+                description={props.products[x].description}
+                handleProductEdit={props.handleProductEdit}
+                handleProductDelete={props.handleProductDelete}
+                state={props.state}
+            />)
+
+            row.push(
+                <div key={x} className="col-md-3 col-xs-6" align="center">
+                    { cardJsx}</div>)
+                cardJsx = [];
+
+            /* if(x +1 === props.products.length){
+                row.push(
+                <div className="col-md-3 col-xs-6" align="center">
+                    { cardJsx}</div>)
+            } */
         }
 
         productJsx = row;
@@ -69,10 +100,10 @@ const products = (props) => {
         }) */
         jsxHtml = (
             <div className="container-fluid">
-                
+                <div className="row">
                             {productJsx}
                     
-                    
+                </div>
             </div>
                     
                         

@@ -74,6 +74,7 @@ class Dashboard extends Component {
         let promocode = event.target.promocode.value;
         let description = event.target.description.value;
         let userId = this.state.userData.id;
+        let url = event.target.imgurl.value
         axios({
             method: "POST",
             url: "/product/add",
@@ -81,9 +82,11 @@ class Dashboard extends Component {
                 name: name,
                 price: price,
                 purchaseurl: purchaseurl,
+                url: url,
                 promocode: promocode,
                 description: description,
                 UserId: userId
+                
             }
         }).then(results => {
             console.log(results.data);
@@ -111,6 +114,8 @@ class Dashboard extends Component {
         let description = event.target.description.value;
         let productId = event.target.productid.value;
         let userId = this.state.userData.id;
+        let url = event.target.imgurl.value;
+
         console.log(name,price,purchaseurl,promocode,description,productId,userId)
         axios({
             method: "PUT",
@@ -118,6 +123,7 @@ class Dashboard extends Component {
             data: {
                 name: name,
                 id: productId,
+                url: url,
                 price: price,
                 purchaseurl: purchaseurl,
                 promocode: promocode,
@@ -161,7 +167,10 @@ class Dashboard extends Component {
         if(this.props.location.token){ 
             jsxHtml = (
             <Aux>
-                <SideDrawer/>
+                <SideDrawer 
+                    test="test"
+                />
+                
                     <div className="container-fluid" id="DashContent">
                         <div className="row">
                             <div className="DashGreeting">

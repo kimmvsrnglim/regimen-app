@@ -31,7 +31,7 @@ class Signup extends Component {
         }).then(results => {
             console.log(results);
             this.props.history.push({
-                pathname: '/'
+                pathname: '/login'
                 
             })
         })

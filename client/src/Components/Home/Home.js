@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header/Header';
-import Profiles from '../Profiles/Profiles';
+import Profiles from '../Users/Users';
 import Aux from '../../hoc/Aux/Aux';
 import What from '../What/What';
 import How from '../How/How';

@@ -16,6 +16,12 @@ const productFormEdit = (props) => {
                         </div>
                         <div className="form-row">
                             <div className="col">
+                                <label htmlFor="imgurl">Img Url</label>
+                                <input type="text" className="form-control" name="imgurl" placeholder="Image Url" defaultValue={product.url}/>
+                            </div>
+                        </div>
+                        <div className="form-row">
+                            <div className="col">
                                 <label htmlFor="price">Price</label>
                                 <input type="price" className="form-control" name="price" placeholder="Price" defaultValue={product.price}/>
                             </div>

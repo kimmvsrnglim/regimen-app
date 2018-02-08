@@ -42,7 +42,7 @@ route.put('/edit', (req,res,next) => {
 })
 route.get('/', (req,res,next) => {
     models.Products.findAll({
-        order: [id]
+        
     }).then(results => {
         //console.log(results)
         res.json(results);
@@ -64,7 +64,8 @@ route.delete('/delete', (req,res,next) => {
 })
 route.get('/:id', (req,res,next) => {
     models.Products.findAll({
-        where: {UserId: req.params.id}
+        where: {UserId: req.params.id},
+        order: ['id']
     }).then(results => {
         res.json(results);
     })

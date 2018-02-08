@@ -35,14 +35,14 @@ class App extends Component {
                     path="/signup" 
                     component={Signup} 
                 />
+                <Route
+                    path="/profiles"
+                    component={ProfilesV2}
+                />
                 <Route 
                     path="/dashboard" 
                     component={Dashboard} 
                 /> 
-                <Route
-                    path="/ProfilesV2"
-                    component={ProfilesV2}
-                />
                 <Route 
                     exact 
                     path="/" 

@@ -3,13 +3,31 @@ import Aux from '../../../hoc/Aux/Aux';
 import SideDrawer from '../SideDrawer/SideDrawer';
 import './ProfilesV2.css';
 import { Link,Route,Switch } from 'react-router-dom';
-
+import axios from 'axios';
+import Users from './../../Users/Users';
 
 class ProfilesV2 extends Component {
+    
+    state = {
+        users: []
+    }
+    
+    componentDidMount() {
+        axios({
+            method: "GET",
+            url: "/profiles",
+
+        }).then(results => {
+            console.log(results.data);
+            this.setState({users: results.data});
+        })
+    }
     render() {
+        console.log("PROFILEV2 PROPS");
+        console.log(this.props)
         return (
             <Aux>
-                <SideDrawer/>
+                <SideDrawer state={this.state}/>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-sm-12">
@@ -27,6 +45,17 @@ class ProfilesV2 extends Component {
                     <div className="row">
                         <div className="col-sm-12">
                             <div className="ProfileStuff">
+                            <Switch>
+                                <Route path={`${this.props.match.url}/:id`}
+
+                                />
+                                <Route
+                                    path={`${this.props.match.url}`}
+                                    render={() => {
+                                        return(<Users data={this.state.users}/>
+                                        )}}
+                                />
+                            </Switch>
                             {/* <Switch>
                                  <Route 
                                     path={`${this.props.match.url}/profiles`} 
