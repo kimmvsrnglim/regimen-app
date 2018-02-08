@@ -2,6 +2,7 @@ import React from 'react';
 import Aux from '../../../hoc/Aux/Aux';
 import thumbnail from './../../Profiles/Profile/ProfileIcon/thumbnail.png';
 import './ProductItem.css';
+import {Link} from 'react-router-dom';
 
 const productItem = (props) => {
 
@@ -20,7 +21,13 @@ const productItem = (props) => {
                 <div className="card-footer">
                     <div className="row">
                     <div className="col">
+                    <Link to={{
+                              pathname: '/Dashboard/product/add',
+                              state:  props.state,
+                              token: props.state.token
+                            }}>
                         <button className="btn btn-sm btn-outline-info" onClick={props.onOpenModal}>Edit</button>
+                    </Link>
                     </div>
                     <div className="col">
                         <button className="btn btn-sm btn-outline-danger" onClick={() => props.handleProductDelete(props.productId)}>Delete</button>

@@ -1,6 +1,7 @@
 import React from 'react';
 import './FancyButton.css';
 import Modal from 'react-responsive-modal'
+import {Link} from 'react-router-dom';
 
 const FancyButton = (props) => {
 
@@ -8,9 +9,17 @@ const FancyButton = (props) => {
     return(
         <div className="FancyButton">
             <p>
-                <button onClick={props.onOpenModal} className="btn btn-one">
-                    Add A New Product Entry
-                </button>
+                <Link to={{
+                              pathname: '/Dashboard/product/add',
+                              state:  props.state,
+                              token: props.state.token,
+                              handleProductAdd: props.handleProductAdd
+                            }}>
+                    <button className="btn btn-one">
+                        Add A New Product Entry
+                    </button>
+                </Link>
+                
             </p>
 
             <Modal
