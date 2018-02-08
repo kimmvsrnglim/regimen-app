@@ -1,6 +1,6 @@
 .ProfileBanner {
     background-image: url('https://tinyurl.com/y9e7ybqj');
-    background-position: bottom;
+    background-position: 0px -300px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 600px;
@@ -10,19 +10,8 @@
 }
 
 h1.ProfilesTitle {
-    padding-top: 3em;
-    padding-right: 1em;
     text-align: right;
     color: white;
-    font-family: 'Zilla Slab';
-    font-size: 5em;
-    text-shadow: 2px 2px #4b4b4b;
-}
-
-h1.ProfilesTitle2 {
-    padding-right: 1em;
-    color: white;
-    text-align: right;
     font-family: 'Zilla Slab';
     font-size: 5em;
     text-shadow: 2px 2px #4b4b4b;
@@ -30,4 +19,10 @@ h1.ProfilesTitle2 {
 
 .ProfileStuff {
     height: 400px;
+}
+
+.ProfilesHead {
+    position: absolute;
+    top: 40%;
+    right: 2%;
 }

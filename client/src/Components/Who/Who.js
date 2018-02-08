@@ -4,32 +4,36 @@ import './Who.css';
 class Who extends Component {
     render() {
         return(
-                <div className="container-fluid">
-                    <div className="row" id="Who">
-                        <div className="col-sm-12">
-                            <h3 className="WhatTitle" align="center">
-                                Who We Are
-                            </h3>
+                <div id="Who">
+                    <div className="container">
+                        <div className="row" id="Who">
+                            <div className="col-sm-12">
+                                <h3 className="WhatTitle" align="center">
+                                    Who We Are
+                                </h3>
+                            </div>
                         </div>
-                    </div>
-                    <div className="row" id="AboutUs">
-                        <div className="col-sm-6">
-                            <h4 className="About1" align="right">
-                                Kim Lim
-                            </h4>
-                            <p align="right">
-                                Nine hundred years of time and space, and I've never been slapped by someone's mother. Jelly baby? Oh my word!<span className="highlight1"> Geronimo! Run. </span> Oh, for God's sake! Gallfrey stands! I've reversed the polarity of the Neutron flow, so the TARDIS should be free from the force field now. <span className="highlight1"> Sorry, must dash! We're trying to defeat the Daleks, not start a jumble sale! It's a fez. </span> I wear a fez now. Fezzes are cool. You can spend the rest of your life with me, but I can't spend the rest of mine with you. I have to live on. Alone. That's the curse of the Time Lords.
-                            </p>
-                        </div>
-                        <div className="col-sm-6">
-                            <h4 className="About2" align="left">
-                                Cliff Cole
-                            </h4>
-                            <p align="left">
-                                Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette <span className="highlight2"> tatsoi pea sprouts</span> fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
-                                <br/><br/>
-                                Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed <span className="highlight2"> collard greens nori.</span> Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.
-                            </p>
+                        <div className="row" id="AboutUs">
+                            <div className="col-sm-6">
+                                <h4 className="About1" align="right">
+                                    Kim Lim
+                                </h4>
+                                <p align="right">
+                                    Hi, I'm Kim. I'm a <span className="highlight1">front-end developer</span>. I started out my career in the <span className="highlight1">hospitality industry</span>, primarily in the restaurant business. <br/><br/>
+                                    Overtime, I've been seeking a space to get more creative. I had experience with HTML/CSS and wanted to expand on that knowledge. That led to my interest to enroll in <span className="highlight1">DigitalCrafts</span> in Atlanta, GA. <br/> 
+                                    
+                                </p>
+                            </div>
+                            <div className="col-sm-6">
+                                <h4 className="About2" align="left">
+                                    Cliff Cole
+                                </h4>
+                                <p align="left">
+                                    Hi, I'm Cliff. I'm a <span className="highlight2">full-stack developer</span> based in Atlanta, GA. My past experience was primarily in <span className="highlight2">Linux System Engineering</span>.
+                                    <br/><br/>
+                                    In my free time, I enjoy <span className="highlight2">hiking & mountain biking</span>. Recently, I wanted to gain more of a structured learning experience so I joined DigitalCrafts this past fall. 
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

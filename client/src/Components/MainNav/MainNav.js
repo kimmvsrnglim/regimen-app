@@ -13,18 +13,17 @@ class MainNav extends Component {
         return (
         <ul className="navbar-nav d-flex justify-content-end">
             <li className="nav-item">
-                <Scrollchor to="#What" animate={{offset: 20, duration: 600}}>What</Scrollchor>
+                <Scrollchor to="#What">What</Scrollchor>
             </li>
             <li className="nav-item">
-                <Scrollchor to="#How" animate={{offset: 20, duration: 600}}>How</Scrollchor>
+                <Scrollchor to="#How">How</Scrollchor>
             </li>
             <li className="nav-item">
-                <Scrollchor to="#Who" animate={{offset: 20, duration: 600}}>Who</Scrollchor>
+                <Scrollchor to="#Who">Who</Scrollchor>
             </li>
         </ul>);
     }
     render() {
-        console.log(window.location);
         return(
                 <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                     <a className="navbar-brand" href="#">
