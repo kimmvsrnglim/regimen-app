@@ -34,8 +34,6 @@ const products = (props) => {
                 description={props.products[x].description}
                 handleProductEdit={props.handleProductEdit}
                 handleProductDelete={props.handleProductDelete}
-                onCloseModal={props.onCloseModal}
-                onOpenModal={props.onOpenModal}
                 state={props.state}
             />)
 

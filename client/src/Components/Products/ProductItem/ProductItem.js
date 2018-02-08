@@ -5,7 +5,9 @@ import './ProductItem.css';
 import {Link} from 'react-router-dom';
 
 const productItem = (props) => {
-
+    console.log("PRODUCTITEM!!!!!!!!!!: ");
+    console.log(props)
+    
     return (
         <Aux>
             
@@ -22,11 +24,13 @@ const productItem = (props) => {
                     <div className="row">
                     <div className="col">
                     <Link to={{
-                              pathname: '/Dashboard/product/add',
+                              pathname: '/Dashboard/product/edit',
                               state:  props.state,
-                              token: props.state.token
+                              product: props,
+                              token: props.state.token,
+                              handleProductEdit: props.handleProductEdit
                             }}>
-                        <button className="btn btn-sm btn-outline-info" onClick={props.onOpenModal}>Edit</button>
+                        <button className="btn btn-sm btn-outline-info">Edit</button>
                     </Link>
                     </div>
                     <div className="col">
