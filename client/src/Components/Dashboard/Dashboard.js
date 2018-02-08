@@ -129,17 +129,17 @@ class Dashboard extends Component {
             <Aux>
                 <SideDrawer/>
                     <div className="container-fluid" id="DashContent">
-                    <div className="row">
-                        <div className="DashGreeting">
-                            <h2 className="DashTitle">Hello, [USER]</h2>
-                            <FancyButton
+                        <div className="row">
+                            <div className="DashGreeting">
+                                <h2 className="DashTitle">Hello, {this.state.userData.firstname}</h2>
+                                <FancyButton
                                 handleProductAdd={this.handleProductAdd}
                                 modalOpen={this.state.modalOpen}
                                 onCloseModal={this.onCloseModal}
                                 onOpenModal={this.onOpenModal}
                                 state={this.state}
-                            /> 
-                        </div>
+                                /> 
+                            </div>
                     </div>
                 </div>
                 <Switch>
