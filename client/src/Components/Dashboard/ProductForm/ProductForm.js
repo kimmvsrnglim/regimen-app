@@ -1,10 +1,11 @@
 import React from 'react';
 
 const productForm = (props) => {
+    console.log("DAPROPS");
     console.log(props);
     return(
-        <div>
-                <form onSubmit={(event) => props.handleProductAdd(event)}>
+        <div className="container">
+                <form onSubmit={(event) => props.location.handleProductAdd(event, props)}>
                         <div className="form-row">
                             <div className="col">
                                 <label htmlFor="productname">Product Name</label>

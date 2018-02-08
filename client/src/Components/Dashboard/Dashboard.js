@@ -6,6 +6,9 @@ import Aux from '../../hoc/Aux/Aux';
 //import ProductItem from '../ProductEntry/ProductItem';
 import axios from 'axios';
 import Products from './../Products/Products'
+import ProductForm from './ProductForm/ProductForm'
+import {Link} from 'react-router-dom';
+import { Route,Switch } from 'react-router-dom';
 
 class Dashboard extends Component {
     state = {
@@ -43,6 +46,7 @@ class Dashboard extends Component {
                 console.log("newUserData");
                 console.log(newUserData);
                 this.setState({userData: newUserData});
+                
             })
         }
     }
@@ -59,7 +63,8 @@ class Dashboard extends Component {
         this.setState({ modalOpen: false });
     };
 
-    handleProductAdd = (event) => {
+    handleProductAdd = (event,props) => {
+        console.log("GOT TO PRODUCT ADD");
         event.preventDefault()
         console.log(event.target);
         let name = event.target.productname.value;
@@ -81,8 +86,15 @@ class Dashboard extends Component {
             }
         }).then(results => {
             console.log(results.data);
-            this.onCloseModal()
+            console.log("ADD PROPS");
+            console.log(props);
             this.getProductsByUserId(userId);
+            props.history.push({
+                pathname: '/Dashboard',
+                token: props.location.token,
+                userData: this.state.userData
+            }
+            );
         }) 
 
     }
@@ -115,7 +127,7 @@ class Dashboard extends Component {
         if(this.props.location.token){ 
             jsxHtml = (
             <Aux>
-                    <SideDrawer/>
+                <SideDrawer/>
                     <div className="container-fluid" id="DashContent">
                     <div className="row">
                         <div className="DashGreeting">
@@ -125,18 +137,31 @@ class Dashboard extends Component {
                                 modalOpen={this.state.modalOpen}
                                 onCloseModal={this.onCloseModal}
                                 onOpenModal={this.onOpenModal}
+                                state={this.state}
                             /> 
                         </div>
                     </div>
                 </div>
-                <Products 
-                    products={this.state.userData.products}
-                    handleProductDelete={this.handleProductDelete}
-                    handleProductEdit={this.handleProductEdit}
-                    modalOpen={this.state.modalOpen}
-                    onCloseModal={this.onCloseModal}
-                    onOpenModal={this.onOpenModal}
+                <Switch>
+                <Route 
+                    path={`${this.props.match.url}/product/add`} 
+                    component={ProductForm} 
                 />
+                <Route 
+                    path={`${this.props.match.url}`}
+                    render={() => {
+                        return (<Products 
+                            products={this.state.userData.products}
+                            handleProductDelete={this.handleProductDelete}
+                            handleProductEdit={this.handleProductEdit}
+                            modalOpen={this.state.modalOpen}
+                            onCloseModal={this.onCloseModal}
+                            onOpenModal={this.onOpenModal}
+                            state={this.state}
+                        />)
+                    }} 
+                />
+                </Switch>
             </Aux>
             );
         }else {

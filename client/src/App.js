@@ -4,9 +4,10 @@ import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import Footer from './Components/Footer/Footer';
 //import Layout from './Components/Layout/Layout';
-import { Route } from 'react-router-dom';
+import { Route,Switch } from 'react-router-dom';
 import Signup from './Components/Signup/Signup';
 import Dashboard from './Components/Dashboard/Dashboard';
+import ProductForm from './Components/Dashboard/ProductForm/ProductForm'
 import ProfilesV2 from './Components/Dashboard/ProfilesV2/ProfilesV2';
 //import axios from 'axios';
 
@@ -19,11 +20,10 @@ class App extends Component {
     return (
         <div className="App">
             <div className="Site-content">
-                <Route 
-                    exact 
-                    path="/" 
-                    component={Home} 
-                />
+                <main>{this.props.children}</main>
+            </div> 
+            <Switch>
+                
                 <Route 
                     path="/home" 
                     component={Home} 
@@ -40,11 +40,18 @@ class App extends Component {
                     path="/dashboard" 
                     component={Dashboard} 
                 /> 
-                <Route 
+                <Route
                     path="/ProfilesV2"
                     component={ProfilesV2}
                 />
-            </div> 
+                <Route 
+                    exact 
+                    path="/" 
+                    component={Home} 
+                />
+                </Switch>
+                
+            
             <Footer />
         </div>
     );

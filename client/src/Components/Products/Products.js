@@ -36,6 +36,7 @@ const products = (props) => {
                 handleProductDelete={props.handleProductDelete}
                 onCloseModal={props.onCloseModal}
                 onOpenModal={props.onOpenModal}
+                state={props.state}
             />)
 
             if(x +1 === props.products.length){
