@@ -5,7 +5,26 @@ import {Logo} from '../Logo/Logo.png';
 import './MainNav.css';
 
 class MainNav extends Component {
+    ifDisplay = () => {
+        console.log(window.location.pathname)
+        if (window.location.pathname === '/login' || window.location.pathname === '/signup') {
+            return null;
+        }
+        return (
+        <ul className="navbar-nav d-flex justify-content-end">
+            <li className="nav-item">
+                <Scrollchor to="#What" animate={{offset: 20, duration: 600}}>What</Scrollchor>
+            </li>
+            <li className="nav-item">
+                <Scrollchor to="#How" animate={{offset: 20, duration: 600}}>How</Scrollchor>
+            </li>
+            <li className="nav-item">
+                <Scrollchor to="#Who" animate={{offset: 20, duration: 600}}>Who</Scrollchor>
+            </li>
+        </ul>);
+    }
     render() {
+        console.log(window.location);
         return(
                 <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                     <a className="navbar-brand" href="#">
@@ -27,18 +46,9 @@ class MainNav extends Component {
                             </li>
                         </ul>
                     </div>
+                    
                     <div className="navbar-collapse collapse dual-collapse">
-                        <ul className="navbar-nav d-flex justify-content-end">
-                            <li className="nav-item">
-                                <Scrollchor to="#What">What</Scrollchor>
-                            </li>
-                            <li className="nav-item">
-                                <Scrollchor to="#How">How</Scrollchor>
-                            </li>
-                            <li className="nav-item">
-                                <Scrollchor to="#Who">Who</Scrollchor>
-                            </li>
-                        </ul>
+                        {this.ifDisplay()}
                     </div>
                 </nav>
         )

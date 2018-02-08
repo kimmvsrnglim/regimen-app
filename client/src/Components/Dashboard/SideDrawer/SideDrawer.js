@@ -10,9 +10,10 @@ class SideDrawer extends Component {
   render () {
     return (
         <Menu width={ '220px' }>
-          <Link to="home" className="menu-item" href="/">Home</Link>
-          <Link to="about" className="menu-item" href="/login">Login</Link>
-          <Link to="contact" className="menu-item" href="/signin">Signin</Link>
+          <Link to="Home" className="menu-item" href="/">Home</Link>
+          <Link to="Dashboard" className="menu-item" href="/dashboard">My Dash</Link>
+          <Link to="ProfilesV2" className="menu-item" href="/ProfilesV2">Profiles</Link>
+          <Link to="Logout" className="menu-item" href="/logout">Logout</Link>
         </Menu>
     );
   }
