@@ -13,6 +13,33 @@ route.post('/add', (req,res,next) => {
         res.json(results);
     })
 })
+route.put('/edit', (req,res,next) => {
+    console.log(req.body);
+    let name = req.body.name;
+    let price = req.body.price;
+    let purchaseurl = req.body.purchaseurl;
+    let promocode = req.body.promocode;
+    let description = req.body.description;
+    let UserId = req.body.UserId;
+    let productId = req.body.id
+    models.Products.update(
+        {
+            name: name,
+            price: price,
+            purchaseurl: purchaseurl,
+            promocode: promocode,
+            description: description,
+
+        }, {
+            where: {
+                id: productId,
+                UserId: UserId
+            }
+        }
+    ).then(results => {
+        res.json(results);
+    })
+})
 route.get('/', (req,res,next) => {
     models.Products.findAll().then(results => {
         //console.log(results)

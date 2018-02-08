@@ -9,6 +9,7 @@ import Products from './../Products/Products'
 import ProductForm from './ProductForm/ProductForm'
 import {Link} from 'react-router-dom';
 import { Route,Switch } from 'react-router-dom';
+import ProductFormEdit from './ProductFormEdit/ProductFormEdit'
 
 class Dashboard extends Component {
     state = {
@@ -99,9 +100,42 @@ class Dashboard extends Component {
 
     }
 
-    handleProductEdit = (event) => {
+    handleProductEdit = (event,props) => {
         event.preventDefault();
-        console.log(event.target)
+        console.log("Edit PROPS");
+        
+        let name = event.target.productname.value;
+        let price = event.target.price.value;
+        let purchaseurl = event.target.purchaseurl.value;
+        let promocode = event.target.promocode.value;
+        let description = event.target.description.value;
+        let productId = event.target.productid.value;
+        let userId = this.state.userData.id;
+        console.log(name,price,purchaseurl,promocode,description,productId,userId)
+        axios({
+            method: "PUT",
+            url: "/product/edit",
+            data: {
+                name: name,
+                id: productId,
+                price: price,
+                purchaseurl: purchaseurl,
+                promocode: promocode,
+                description: description,
+                UserId: userId
+            }
+        }).then(results => {
+            console.log(results.data);
+            
+            console.log(props);
+            this.getProductsByUserId(userId);
+            props.history.push({
+                pathname: '/Dashboard',
+                token: props.location.token,
+                userData: this.state.userData
+            }
+            );
+        }) 
     }
 
     handleProductDelete = (id) => {
@@ -146,6 +180,10 @@ class Dashboard extends Component {
                 <Route 
                     path={`${this.props.match.url}/product/add`} 
                     component={ProductForm} 
+                />
+                <Route 
+                    path={`${this.props.match.url}/product/edit`} 
+                    component={ProductFormEdit} 
                 />
                 <Route 
                     path={`${this.props.match.url}`}
