@@ -13,6 +13,7 @@ const users = require('./routes/users');
 const signup = require('./routes/signup');
 const login = require('./routes/login');
 const product = require('./routes/product');
+const profiles = require('./routes/profiles');
 
 let app = express();
 
@@ -35,6 +36,7 @@ app.use('/users', users);
 app.use('/signup', signup);
 app.use('/login', login);
 app.use('/product',product);
+app.use('/profiles',profiles);
 
 
 module.exports = app;

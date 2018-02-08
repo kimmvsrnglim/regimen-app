@@ -41,7 +41,9 @@ route.put('/edit', (req,res,next) => {
     })
 })
 route.get('/', (req,res,next) => {
-    models.Products.findAll().then(results => {
+    models.Products.findAll({
+        order: [id]
+    }).then(results => {
         //console.log(results)
         res.json(results);
     })

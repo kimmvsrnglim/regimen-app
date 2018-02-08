@@ -12,7 +12,7 @@ const productItem = (props) => {
         <Aux>
             
             <div className="card">
-                <img className="card-img-top" src={thumbnail} />
+                <img className="card-img-top" src={props.url} />
                 <div className="card-body">
                     <h5 className="card-Title">{props.name}</h5>
                     <p className="card-text"><small>{props.description}</small></p>

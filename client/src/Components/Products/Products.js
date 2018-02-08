@@ -31,6 +31,7 @@ const products = (props) => {
                 price={props.products[x].price}
                 purchaseurl={props.products[x].purchaseurl}
                 promocode={props.products[x].promocode}
+                url={props.products[x].url}
                 description={props.products[x].description}
                 handleProductEdit={props.handleProductEdit}
                 handleProductDelete={props.handleProductDelete}
