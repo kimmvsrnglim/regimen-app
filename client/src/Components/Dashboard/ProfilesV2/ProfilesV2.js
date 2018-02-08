@@ -13,14 +13,20 @@ class ProfilesV2 extends Component {
                     <div className="row">
                         <div className="col-sm-12">
                             <div className="ProfileBanner">
-                                <h1 className="ProfilesTitle">Discover New</h1>
-                                <h1 className="ProfilesTitle2">Profiles</h1>
+                                <div className="ProfilesHead">
+                                    <h1 className="ProfilesTitle">Discover New
+                                    <br/>Profiles
+                                    <br/>
+                                    -
+                                    </h1>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-sm-12">
                             <div className="ProfileStuff">
+
                             </div>
                         </div>
                     </div>

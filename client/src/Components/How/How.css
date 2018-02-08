@@ -1,5 +1,5 @@
 #How {
-    height: auto;
+    height: 600px;
 }
 
 .HowTitle {
@@ -43,7 +43,7 @@ p.HowHalf1 {
     margin-right: 0px;
     margin-left: 0px;
     padding-bottom: 10px;
-    height: auto;
+    height: 610px;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,4 +60,13 @@ p.HowHalf1 {
 .no-gutter > [class*='col-'] {
     padding-right:0;
     padding-left:0;
+}
+
+.highlightHow {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    font-size: 1.2em;
+    padding-left: 5px;
+    padding-right: 5px; 
+    font-family: 'Prato';
 }

@@ -5,8 +5,7 @@
 
 #AboutUs {
     padding: 2em;
-    height: 500px;
-    /* height: auto; */
+    height: auto;
 }
 .About1, .About2 {
     font-family: 'Zilla Slab';
