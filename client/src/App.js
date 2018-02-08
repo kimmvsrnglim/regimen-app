@@ -20,8 +20,7 @@ class App extends Component {
     return (
         <div className="App">
             <div className="Site-content">
-                <main>{this.props.children}</main>
-            </div> 
+                
             <Switch>
                 
                 <Route 
@@ -51,7 +50,7 @@ class App extends Component {
                 />
                 </Switch>
                 
-            
+            </div>
             <Footer />
         </div>
     );
