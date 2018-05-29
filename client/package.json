@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "bootstrap": "^3.3.7",
+    "hoek": "^4.2.1",
     "react": "^16.4.0",
     "react-bootstrap": "^0.32.1",
     "react-burger-menu": "^2.4.4",
